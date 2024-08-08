@@ -17,13 +17,15 @@ public class Service {
         this.ID = ID;
     }
 
-    public Service(String cedula, String plate, Date start, Date wayOut) {
+    public Service(String cedula, String plate, Date start, Date wayOut, double priceHour, double totalHours, double totalPrice) {
         this.cedula = cedula;
         this.plate = plate;
         this.start = start;
         this.wayOut = wayOut;
+        this.priceHour = priceHour;
+        this.totalHours = totalHours;
+        this.totalPrice = totalPrice;
     }
-
 
     public int getID() {
         return ID;
@@ -45,20 +47,44 @@ public class Service {
         this.start = start;
     }
 
-    public String getPlaca() {
-        return plate;
-    }
-
-    public void setPlaca(String plate) {
-        this.plate = plate;
-    }
-
     public Date getWayOut() {
         return wayOut;
     }
 
     public void setWayOut(Date wayOut) {
         this.wayOut = wayOut;
+    }
+
+    public String getPlate() {
+        return plate;
+    }
+
+    public void setPlate(String plate) {
+        this.plate = plate;
+    }
+
+    public double getPriceHour() {
+        return priceHour;
+    }
+
+    public void setPriceHour(double priceHour) {
+        this.priceHour = priceHour;
+    }
+
+    public double getTotalHours() {
+        return totalHours;
+    }
+
+    public void setTotalHours(double totalHours) {
+        this.totalHours = totalHours;
+    }
+
+    public double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
     }
 
     @Override
@@ -69,6 +95,9 @@ public class Service {
         sb.append(", plate='").append(plate).append('\'');
         sb.append(", start=").append(start);
         sb.append(", wayOut=").append(wayOut);
+        sb.append(", priceHour=").append(priceHour);
+        sb.append(", totalHours=").append(totalHours);
+        sb.append(", totalPrice=").append(totalPrice);
         sb.append('}');
         return sb.toString();
     }
