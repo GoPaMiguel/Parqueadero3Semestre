@@ -5,34 +5,31 @@ import java.util.Date;
 public class Service {
     private int ID;
     private String cedula;
-    private String placa;
+    private String plate;
     private Date start;
     private Date wayOut;
+    private double priceHour;
+    private double totalHours;
+    private double totalPrice;
+
 
     public Service(int ID) {
         this.ID = ID;
     }
 
-    public Service(String cedula, String placa, Date start, Date wayOut) {
+    public Service(String cedula, String plate, Date start, Date wayOut) {
         this.cedula = cedula;
-        this.placa = placa;
+        this.plate = plate;
         this.start = start;
         this.wayOut = wayOut;
     }
 
-    public Service(int ID, String cedula, String placa, Date start, Date wayOut) {
-        this.ID = ID;
-        this.cedula = cedula;
-        this.placa = placa;
-        this.start = start;
-        this.wayOut = wayOut;
-    }
 
     public int getID() {
         return ID;
     }
 
-  public String getCedula() {
+    public String getCedula() {
         return cedula;
     }
 
@@ -49,11 +46,11 @@ public class Service {
     }
 
     public String getPlaca() {
-        return placa;
+        return plate;
     }
 
-    public void setPlaca(String placa) {
-        this.placa = placa;
+    public void setPlaca(String plate) {
+        this.plate = plate;
     }
 
     public Date getWayOut() {
@@ -69,7 +66,7 @@ public class Service {
         final StringBuilder sb = new StringBuilder("Service{");
         sb.append("ID=").append(ID);
         sb.append(", cedula='").append(cedula).append('\'');
-        sb.append(", placa='").append(placa).append('\'');
+        sb.append(", plate='").append(plate).append('\'');
         sb.append(", start=").append(start);
         sb.append(", wayOut=").append(wayOut);
         sb.append('}');
